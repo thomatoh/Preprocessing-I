@@ -240,9 +240,30 @@ header div nav a:nth-child(3):hover {
 header div nav a:nth-child(4):hover {
   border-bottom-color: blue;
 }
-header div img {
+@media (max-width: 500px) {
+  header div span {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+header div span .nav-logo {
   height: 5rem;
   margin-right: 2rem;
+}
+header div span .nav-icon {
+  height: 5rem;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  header div span .nav-icon {
+    display: block;
+  }
+}
+header div span .nav-icon:hover {
+  background: white;
 }
 .intro-background {
   display: flex;
@@ -253,7 +274,11 @@ header div img {
   background-image: url('https://images.pexels.com/photos/861311/pexels-photo-861311.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
   height: 50rem;
   background-size: cover;
-  opacity: 0.7;
+}
+@media (max-width: 500px) {
+  .intro-background {
+    justify-content: start;
+  }
 }
 .intro-background h1 {
   color: white;
@@ -263,14 +288,17 @@ header div img {
   margin-bottom: 2rem;
   width: 60%;
   text-align: center;
+  text-shadow: 0.2rem 0.2rem black;
 }
 @media (max-width: 500px) {
   .intro-background h1 {
     font-size: 2.5rem;
+    margin-top: 2rem;
   }
 }
 .intro-background h3 {
   color: white;
+  text-shadow: 0.2rem 0.2rem black;
 }
 @media (max-width: 500px) {
   .intro-background h3 {
@@ -286,7 +314,11 @@ header div img {
   background-image: url('https://images.pexels.com/photos/861339/pexels-photo-861339.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
   height: 50rem;
   background-size: cover;
-  opacity: 0.7;
+}
+@media (max-width: 500px) {
+  .portfolio-background {
+    justify-content: start;
+  }
 }
 .portfolio-background h1 {
   color: black;
@@ -296,14 +328,17 @@ header div img {
   margin-bottom: 2rem;
   width: 60%;
   text-align: center;
+  text-shadow: 0.2rem 0.2rem white;
 }
 @media (max-width: 500px) {
   .portfolio-background h1 {
     font-size: 2.5rem;
+    margin-top: 2rem;
   }
 }
 .portfolio-background h3 {
   color: black;
+  text-shadow: 0.2rem 0.2rem white;
 }
 @media (max-width: 500px) {
   .portfolio-background h3 {
@@ -319,7 +354,11 @@ header div img {
   background-image: url('https://images.pexels.com/photos/417142/pexels-photo-417142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   height: 50rem;
   background-size: cover;
-  opacity: 0.7;
+}
+@media (max-width: 500px) {
+  .contact-background {
+    justify-content: start;
+  }
 }
 .contact-background h1 {
   color: white;
@@ -329,14 +368,17 @@ header div img {
   margin-bottom: 2rem;
   width: 60%;
   text-align: center;
+  text-shadow: 0.2rem 0.2rem black;
 }
 @media (max-width: 500px) {
   .contact-background h1 {
     font-size: 2.5rem;
+    margin-top: 2rem;
   }
 }
 .contact-background h3 {
   color: white;
+  text-shadow: 0.2rem 0.2rem black;
 }
 @media (max-width: 500px) {
   .contact-background h3 {
@@ -442,6 +484,9 @@ header div img {
 .section-2 .section-2-list li:last-child {
   border-bottom: 0.2rem solid #EEEEEE;
 }
+.section-3 h3 {
+  margin: 0 0 1rem 0;
+}
 .section-3 table {
   font-size: 1.6rem;
   width: 100%;
@@ -455,6 +500,15 @@ header div img {
 }
 .section-3 table tr td {
   padding: 2rem 1rem;
+}
+.section-3 table tr td span {
+  font-weight: bold;
+  display: none;
+}
+@media (max-width: 500px) {
+  .section-3 table tr td span {
+    display: inline;
+  }
 }
 .section-3 table tr:nth-child(odd) {
   background: #EEEEEE;
